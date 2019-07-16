@@ -3,7 +3,7 @@ function exportAndSaveCanvas()  {
   background:'#fff',
   onrendered: function(canvas) {         
   let imgData = canvas.toDataURL('image/jpeg');
-  var url = 'upload/export.php';
+  var url = 'http://97e827ad.ngrok.io/getting_images';
     $.ajax({ 
         type: "POST", 
         url: url,
