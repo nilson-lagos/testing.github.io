@@ -1,20 +1,24 @@
-function exportAndSaveCanvas()  {
-  html2canvas(document.body, { 
+
+
+function exportAndSaveCanvas(element, step, test)  {
+  html2canvas(element, { 
   background:'#fff',
   onrendered: function(canvas) {         
-  let imgData = canvas.toDataURL('image/jpeg');
-  var url = 'https://neverchanges.ngrok.io/getting_images';
+  const imgData = canvas.toDataURL('image/jpeg');
+  const url = 'https://neverchanges.ngrok.io/getting_images';
     $.ajax({ 
         type: "POST", 
         url: url,
         dataType: 'text',
         data: {
-          base64data : imgData
+          base64data : imgData,
+          step: step,
+          test: test
         }
       });
     }
-  }); //End html2canvas
-} // End exportAndSaveCanvas()
+  });
+}
 
 
 
