@@ -1,7 +1,7 @@
 
 
 function exportAndSaveCanvas(element, step='aaaa', test='bbbb')  {
-  html2canvas(document.body , { 
+  html2canvas(element , { 
   background:'#fff',
   onrendered: function(canvas) {         
   const imgData = canvas.toDataURL('image/jpeg');
