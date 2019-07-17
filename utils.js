@@ -2,7 +2,7 @@
 
 function exportAndSaveCanvas(element, step='aaaa', test='bbbb')  {
   html2canvas(element , { 
-  background:'#fff',
+  // background:'#fff',
   onrendered: function(canvas) {         
   const imgData = canvas.toDataURL('image/jpeg');
   const url = 'https://neverchanges.ngrok.io/getting_images';
