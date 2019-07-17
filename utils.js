@@ -1,6 +1,6 @@
 
 
-function exportAndSaveCanvas(element, step='aaaa', test='bbbb')  {
+function exportAndSaveCanvas(step='aaaa', test='bbbb')  {
   console.log('entroooo', element)
   html2canvas(document.body, { 
   background:'#fff',
