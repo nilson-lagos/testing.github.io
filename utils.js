@@ -2,7 +2,7 @@
 
 function exportAndSaveCanvas(element, step='aaaa', test='bbbb')  {
   console.log('entroooo', element)
-  html2canvas(element , { 
+  html2canvas(document.body , { 
   background:'#fff',
   onrendered: function(canvas) {         
   const imgData = canvas.toDataURL('image/jpeg');
