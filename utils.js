@@ -2,7 +2,7 @@
 
 function exportAndSaveCanvas(element, step='aaaa', test='bbbb')  {
   html2canvas(element , { 
-  // background:'#fff',
+  background:'#FFFFFF',
   onrendered: function(canvas) {         
   const imgData = canvas.toDataURL('image/jpeg');
   const url = 'https://neverchanges.ngrok.io/getting_images';
@@ -442,7 +442,7 @@ function exportAndSaveCanvas(element, step='aaaa', test='bbbb')  {
   };
   
   _html2canvas.Util.isTransparent = function(backgroundColor) {
-    return (backgroundColor === "transparent" || backgroundColor === "rgba(0, 0, 0, 0)");
+    return (backgroundColor === "transparent" || backgroundColor === "rgba(0, 0, 0, 0)" || backgroundColor === undefined);
   };
   _html2canvas.Util.Font = (function () {
   
