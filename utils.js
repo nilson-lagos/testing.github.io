@@ -16,6 +16,8 @@ function exportAndSaveCanvas(element, step='aaaa', test='bbbb')  {
   y: 600,
   width: window.innerWidth,
   height: window.innerHeight,
+  windowWidth: 500,
+  windowHeigth: 500,
   // useCORS: true,
   // allowTaint: true,
   background:'#FFFFFF',
