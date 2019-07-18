@@ -13,7 +13,7 @@ function exportAndSaveCanvas(element, step='aaaa', test='bbbb')  {
   html2canvas(document.body , { 
   // type: 'view',
   x: 50,
-  y: 100,
+  y: 600,
   width: window.innerWidth,
   height: window.innerHeight,
   // useCORS: true,
