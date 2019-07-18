@@ -10,7 +10,7 @@ function getCoordinates(el) {
 function exportAndSaveCanvas(element, step='aaaa', test='bbbb')  {
   const rect = getCoordinates(element);
   window.scrollTo(rect.left, rect.top);
-  html2canvas(document.body , { 
+  html2canvas(element , { 
   // type: 'view',
   x: 50,
   y: 600,
