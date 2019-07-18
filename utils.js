@@ -8,16 +8,16 @@ function getCoordinates(el) {
 }
 
 function exportAndSaveCanvas(element, step='aaaa', test='bbbb')  {
-  const rect = getCoordinates(element);
-  window.scrollTo(rect.left, rect.top);
+  // const rect = getCoordinates(element);
+  // window.scrollTo(rect.left, rect.top);
   html2canvas(element , { 
   // type: 'view',
-  x: 50,
-  y: 600,
-  width: window.innerWidth,
-  height: window.innerHeight,
-  windowWidth: 500,
-  windowHeigth: 500,
+  // x: 50,
+  // y: 600,
+  // width: window.innerWidth,
+  // height: window.innerHeight,
+  // windowWidth: 500,
+  // windowHeigth: 500,
   // useCORS: true,
   // allowTaint: true,
   background:'#FFFFFF',
