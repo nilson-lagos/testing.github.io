@@ -12,8 +12,8 @@ function exportAndSaveCanvas(element, step='aaaa', test='bbbb')  {
   window.scrollTo(rect.left, rect.top);
   html2canvas(document.body , { 
   // type: 'view',
-  x: rect.left,
-  y: rect.top,
+  x: 50,
+  y: 100,
   width: window.innerWidth,
   height: window.innerHeight,
   // useCORS: true,
