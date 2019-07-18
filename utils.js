@@ -1,12 +1,19 @@
 
 
-function exportAndSaveCanvas(element, step='aaaa', test='bbbb')  {
-  const rect = element.getBoundingClientRect();
+function getCoordinates(el) {
+  var rect = el.getBoundingClientRect(),
+  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+  scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  return { top: rect.top + scrollTop, left: rect.left + scrollLeft, width: rect.width, height: rect.height }
+}
 
+function exportAndSaveCanvas(element, step='aaaa', test='bbbb')  {
+  const rect = getCoordinates(element);
+  window.scrollTo(rect.left, rect.top);
   html2canvas(document.body , { 
   // type: 'view',
-  x: rect.left + window.scrollX,
-  y: rect.top + window.scrollY,
+  // x: rect.left + window.scrollX,
+  // y: rect.top + window.scrollY,
   width: window.innerWidth,
   height: window.innerHeight,
   // useCORS: true,
