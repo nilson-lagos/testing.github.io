@@ -1,10 +1,12 @@
 
 
 function exportAndSaveCanvas(element, step='aaaa', test='bbbb')  {
+  const rect = element.getBoundingClientRect();
+
   html2canvas(document.body , { 
   // type: 'view',
-  x: window.scrollX,
-  y: window.scrollY,
+  x: rect.left + window.scrollX,
+  y: rect.top + window.scrollY,
   width: window.innerWidth,
   height: window.innerHeight,
   // useCORS: true,
