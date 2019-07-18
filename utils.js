@@ -3,8 +3,8 @@
 function exportAndSaveCanvas(element, step='aaaa', test='bbbb')  {
   html2canvas(document.body , { 
   type: 'view',
-  useCORS: true,
-  allowTaint: true,
+  // useCORS: true,
+  // allowTaint: true,
   background:'#FFFFFF',
   onrendered: function(canvas) {         
   const imgData = canvas.toDataURL('image/jpeg');
