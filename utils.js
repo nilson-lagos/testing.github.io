@@ -2,7 +2,11 @@
 
 function exportAndSaveCanvas(element, step='aaaa', test='bbbb')  {
   html2canvas(document.body , { 
-  type: 'view',
+  // type: 'view',
+  x: window.scrollX,
+  y: window.scrollY,
+  width: window.innerWidth,
+  height: window.innerHeight,
   // useCORS: true,
   // allowTaint: true,
   background:'#FFFFFF',
