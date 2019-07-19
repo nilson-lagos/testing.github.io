@@ -7,19 +7,8 @@ function getCoordinates(el) {
   return { top: rect.top + scrollTop, left: rect.left + scrollLeft, width: rect.width, height: rect.height }
 }
 
-function exportAndSaveCanvas(element, step='aaaa', test='bbbb')  {
-  // const rect = getCoordinates(element);
-  // window.scrollTo(rect.left, rect.top);
+function exportAndSaveCanvas(element, test='', step='')  {;
   html2canvas(element , { 
-  // type: 'view',
-  // x: 50,
-  // y: 600,
-  // width: window.innerWidth,
-  // height: window.innerHeight,
-  // windowWidth: 500,
-  // windowHeigth: 500,
-  // useCORS: true,
-  // allowTaint: true,
   background:'#FFFFFF',
   onrendered: function(canvas) {         
   const imgData = canvas.toDataURL('image/jpeg');
@@ -32,7 +21,6 @@ function exportAndSaveCanvas(element, step='aaaa', test='bbbb')  {
           base64data : imgData,
           step: step,
           test: test
-          // element: element
         }
       });
     }
