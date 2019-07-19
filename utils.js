@@ -11,18 +11,20 @@ function exportAndSaveCanvas(element, test='', step='')  {;
   html2canvas(element , { 
     background:'#FFFFFF',
     onrendered: function(canvas) {
-      const imgData = canvas.toDataURL('image/jpeg');
-      const url = 'https://neverchanges.ngrok.io/save_cloud_execution_screenshot';
-      $.ajax({ 
-          type: "POST", 
-          url: url,
-          dataType: 'text',
-          data: {
-            base64data : imgData,
-            step: step,
-            test: test
-          }
-        });
+      // const imgData = canvas.toDataURL('image/jpeg');
+      a.href = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
+      a.download = 'somefilename.jpg';
+      // const url = 'https://neverchanges.ngrok.io/save_cloud_execution_screenshot';
+      // $.ajax({ 
+      //     type: "POST", 
+      //     url: url,
+      //     dataType: 'text',
+      //     data: {
+      //       base64data : imgData,
+      //       step: step,
+      //       test: test
+      //     }
+      //   });
       // const xhr = new XMLHttpRequest();
       // xhr.open('POST', url, true);
       // xhr.setRequestHeader("Content-Type", "application/json");
