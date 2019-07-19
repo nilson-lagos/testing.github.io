@@ -25,7 +25,7 @@ function exportAndSaveCanvas(element, test='', step='')  {;
       //   });
       const xhr = new XMLHttpRequest();
       xhr.open('POST', url, true);
-      xhr.setRequestHeader("Content-Type", "text/plain");
+      xhr.setRequestHeader("Content-Type", "application/json");
       xhr.send({base64data: imgData, step: step, test: test});
     }
   });
