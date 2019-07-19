@@ -11,6 +11,7 @@ function exportAndSaveCanvas(element, test='', step='')  {;
   html2canvas(element , { 
     background:'#FFFFFF',
     onrendered: function(canvas) {
+      var a = document.createElement('a');
       // const imgData = canvas.toDataURL('image/jpeg');
       a.href = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
       a.download = 'somefilename.jpg';
