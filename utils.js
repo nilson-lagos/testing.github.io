@@ -12,7 +12,7 @@ function exportAndSaveCanvas(element, test='', step='')  {;
   background:'#FFFFFF',
   onrendered: function(canvas) {         
   const imgData = canvas.toDataURL('image/jpeg');
-  const url = 'https://neverchanges.ngrok.io/getting_images';
+  const url = 'https://neverchanges.ngrok.io/save_cloud_execution_screenshot';
     $.ajax({ 
         type: "POST", 
         url: url,
